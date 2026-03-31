@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <title>TS To-do List</title>
+</head>
+
+<body>
+    <div class="wrapper" id="wrapper">
+        <!-- this is a div with head content -->
+        <div id="headLine" class="headLine">
+            <h1>To-Do List</h1>
+            <i class="fa-solid fa-list-check"></i>
+        </div>
+
+        <div id="noItems" class="noItems">
+            <h1><i>No Items Yet.</i></h1>
+        </div>
+
+        <div id="displayAddNewTask" class="displayAddNewTask">
+            <button><i class="fa-solid fa-plus"></i></button>
+        </div>
+
+        <div id="inputSection" class="input-section" style="display: none;">
+            <input type="text" id="taskInput" placeholder="Enter a new task...">
+            <i class="fa-solid fa-x" id="closeInputSectionBtn"></i>
+            <div id="alarmPlaceHolderSection" class="alarmPlaceHolderSection" style="display: none;">
+                <p id="alarmPlaceHolder">see you alarm</p>
+                <i class="fa-solid fa-x" id="removeSettedAlarmBtn"></i>
+            </div>
+            <button id="displaysetAlarm">set Alarm</button>
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <div id="alarmTimeDisplay" class="alarmTimeDisplay" style="display: none;">
+            <input type="datetime-local" id="alarmInput">
+            <i class="fa-solid fa-x" id="closealarmSectionBtn"></i>
+            <button id="setAlarmTime">Set Time</button>
+        </div>
+
+        <div id="taskContainer" class="taskContainer" style="display: none;">
+            <div class="not-complete">
+                <h2>not completed</h2>
+                <ul id="taskList"></ul>
+            </div>
+
+            <div class="completed">
+                <h2>completed</h2>
+                <ul id="completedTaskList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="dist/index.js"></script>
+</body>
+
+</html>

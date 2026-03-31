@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(48, 48, 48);
+    color: #d0d0d0
+}
+
+.headLine {
+    margin: 10px 20px;
+    padding: 1rem;
+    display: flex;
+    font-size: 1.5rem;
+}
+
+.headLine i {
+    margin: 20px 20px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.noItems {
+    margin: 80px auto;
+    padding: 1rem;
+    background: transparent;
+    color: #3a3939;
+    font-size: 1.2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.displayAddNewTask button {
+    margin: 20px 20px;
+    padding: 10px;
+    position: absolute;
+    background: transparent;
+    color: #d0d0d0;
+    font-size: 30px;
+    border: 1px solid rgb(247, 218, 50);
+    border-radius: 50%;
+    cursor: pointer;
+    right: 90px;
+    bottom: 30px;
+}
+
+.displayAddNewTask i {
+    color: rgb(247, 218, 50);
+    font-size: 30px;
+}
+
+.input-section {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    justify-content: space-between;
+    /* This keeps buttons at the bottom */
+    height: 300px;
+    /* Increased slightly to fit everything comfortably */
+    padding: 20px;
+}
+
+.input-section input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.input-section #closeInputSectionBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #ff4d4d;
+    display: inline-block;
+    font-size: 1.3rem;
+}
+
+.input-section button {
+    display: inline-block;
+    margin: 40px 20px;
+    padding: 10px 20px;
+    background-color: rgb(247, 218, 50);
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input-section #addTaskBtn {
+    margin-right: 0;
+    margin-left: 80px;
+}
+
+.alarmPlaceHolderSection {
+    display: flex;
+    /* Flexbox is better for aligning text and icons */
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+#alarmPlaceHolder {
+    flex-grow: 1;
+    /* Takes up 70-80% of the space automatically */
+    font-style: italic;
+    color: #666;
+    width: 80px;
+    background-color: #333;
+}
+
+#removeSettedAlarmBtn {
+    cursor: pointer;
+    color: #ff4d4d;
+    /* Red for the 'X' button */
+    margin: 5px 15px;
+    background-color: #333;
+    border: none;
+    border-radius: none;
+}
+
+.alarmTimeDisplay {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 100px;
+}
+
+.alarmTimeDisplay input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.alarmTimeDisplay #closealarmSectionBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #ff4d4d;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.alarmTimeDisplay button {
+    margin: 10px 10px;
+    padding: 10px 20px;
+    background-color: rgb(247, 218, 50);
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
