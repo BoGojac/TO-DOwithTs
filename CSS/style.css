@@ -17,6 +17,22 @@
     cursor: pointer;
     transition: color 0.2s;
 }
+.searchSection {
+    margin: 20px 20px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.searchSection #searchInput {
+    width: 25%;
+    padding: 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: transparent;
+    color: #d0d0d0;
+    align-items: center;
+}
 
 .noItems {
     margin: 80px auto;
@@ -67,6 +83,7 @@
     height: 300px;
     /* Increased slightly to fit everything comfortably */
     padding: 20px;
+    
 }
 
 .input-section input {
@@ -87,8 +104,14 @@
     display: inline-block;
     font-size: 1.3rem;
 }
-
-.input-section button {
+.input-section #buttonGroup{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+}
+.input-section #buttonGroup button {
     display: inline-block;
     margin: 40px 20px;
     padding: 10px 20px;
@@ -99,10 +122,12 @@
     cursor: pointer;
 }
 
+
 .input-section #addTaskBtn {
     margin-right: 0;
     margin-left: 80px;
 }
+
 
 .alarmPlaceHolderSection {
     display: flex;
@@ -111,6 +136,8 @@
     margin-top: 15px;
     margin-bottom: 10px;
 }
+
+
 
 #alarmPlaceHolder {
     flex-grow: 1;
@@ -164,7 +191,111 @@
 }
 
 .alarmTimeDisplay button {
-    margin: 10px 10px;
+    margin: 5px 5px;
+    padding: 10px 20px;
+    background-color: rgb(247, 218, 50);
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it appears above the input section if both are open */
+}
+
+#incompleteTaskList, #completedTaskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ensures they take up the available space */
+}
+
+.lists {
+    display: flex;
+    align-items: center; /* Centers checkbox with text vertically */
+    margin-bottom: 15px; /* Creates space between Task 1 and Task 2 */
+    padding: 5px 0;
+}
+.lists:hover {
+    background-color: rgb(54, 53, 53); /* Subtle highlight on hover */
+    border-radius: 4px; /* Rounded corners for the hover effect */
+    cursor: pointer;
+}
+.checkbox-round {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(54, 53, 53);
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #fff200;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  /* Add these to center the tick */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.completed, .not-complete{
+    color: #d0d0d0;
+    justify-content: center;
+    margin: 10px 100px;
+}
+
+/* This creates the yellow tick */
+.checkbox-round:checked::after {
+  content: '';
+  width: 4px;
+  height: 8px;
+  border: solid #fff200; /* Your yellow color */
+  border-width: 0 2px 2px 0; /* Creates the 'L' shape */
+  transform: rotate(45deg); /* Rotates the 'L' into a checkmark */
+  margin-bottom: 2px; /* Slight adjustment for centering */
+}
+
+.editTasks {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    justify-content: space-between;
+    /* This keeps buttons at the bottom */
+    height: 200px;
+    
+    
+}
+
+.editTasks input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.editTasks #closeEditSectionBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #ff4d4d;
+    display: inline-block;
+    font-size: 1.3rem;
+}
+
+.editTasks  button {
+    display: inline-block;
+    margin: 40px 20px;
     padding: 10px 20px;
     background-color: rgb(247, 218, 50);
     color: #333;

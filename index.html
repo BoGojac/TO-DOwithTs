@@ -18,6 +18,10 @@
             <i class="fa-solid fa-list-check"></i>
         </div>
 
+        <div id="searchSection" class="searchSection" style="display: none;">
+            <input type="text" id="searchInput" placeholder="Search tasks...">
+        </div>
+
         <div id="noItems" class="noItems">
             <h1><i>No Items Yet.</i></h1>
         </div>
@@ -33,8 +37,11 @@
                 <p id="alarmPlaceHolder">see you alarm</p>
                 <i class="fa-solid fa-x" id="removeSettedAlarmBtn"></i>
             </div>
-            <button id="displaysetAlarm">set Alarm</button>
-            <button id="addTaskBtn">Add Task</button>
+            <div id="buttonGroup">
+                <button id="displaysetAlarm">set Alarm</button>
+                <button id="addTaskBtn">Add Task</button>
+            </div>
+            
         </div>
 
         <div id="alarmTimeDisplay" class="alarmTimeDisplay" style="display: none;">
@@ -46,13 +53,20 @@
         <div id="taskContainer" class="taskContainer" style="display: none;">
             <div class="not-complete">
                 <h2>not completed</h2>
-                <ul id="taskList"></ul>
+                <ul id="incompleteTaskList"></ul>
             </div>
 
             <div class="completed">
                 <h2>completed</h2>
                 <ul id="completedTaskList"></ul>
             </div>
+        </div>
+
+        <div id="editTasks" class="editTasks">
+            <i class="fa-solid fa-x" id="closeEditSectionBtn"></i>
+            <input type="text" id="editTaskInput" >
+            <input type="datetime-local" id="editAlarmInput">
+            <button id="saveEditedTaskBtn">Save Change</button>
         </div>
     </div>
 
