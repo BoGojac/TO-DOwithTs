@@ -137,20 +137,20 @@ const renderTasks = (searchTerm = "") => {
         const textStyle = task.completed ? 'text-decoration: line-through; opacity: 0.6;' : '';
         const displayTime = task.alarmTime ? task.alarmTime.replace('T', ' ') : "No alarm";
         li.innerHTML = `
-        <div style="display: flex; align-items: center; width: 100%;">
-            <input type="checkbox" class="checkbox-round" 
-                ${task.completed ? 'checked' : ''} 
-                onclick="toggleTask(${task.id})">
-            
-            <div onclick="openEditModal(${task.id})" style="margin-left: 12px; cursor: pointer; flex-grow: 1;">
-                <span style="${textStyle}">${task.description}</span><br>
-                <small style="font-size: 0.8em; color: #aaa;">${displayTime}</small>
-            </div>
+            <div style="display: flex; align-items: center; width: 100%;">
+                <input type="checkbox" class="checkbox-round" 
+                    ${task.completed ? 'checked' : ''} 
+                    onclick="toggleTask(${task.id})">
+                
+                <div onclick="openEditModal(${task.id})" style="margin-left: 12px; cursor: pointer; flex-grow: 1;">
+                    <span style="${textStyle}">${task.description}</span><br>
+                    <small style="font-size: 0.8em; color: #aaa;">${displayTime}</small>
+                </div>
 
-            <i class="fa-solid fa-trash" style="color: red; cursor: pointer;" 
-               onclick="deleteTask(${task.id})"></i>
-        </div>
-    `;
+                <i class="fa-solid fa-trash" style="color: red; cursor: pointer;" 
+                onclick="deleteTask(${task.id})"></i>
+            </div>
+        `;
         return li;
     };
     pendingTasks.forEach(task => incompleteTaskList.appendChild(createLi(task)));
